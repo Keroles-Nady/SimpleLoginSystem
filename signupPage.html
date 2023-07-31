@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Attach fontawesome to the project -->
+    <!-- Online method using CDNJS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Attach bootstrap to the project -->
+    <!-- Online method using CDNJS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      integrity="sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Login System Project | Sign Up</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div id="content" class="w-75 mx-auto mt-5 rounded-3 shadow p-5 bg-light text-center">
+          <h1>Smart Login System</h1>
+
+          <div class="form-group">
+            <input type="text" id="userNameSignup" class="sign-up-property form-control mb-3" placeholder="Enter your name" oninput="validateUserName()" required>
+            <small id="errorMessageName" class="text-danger my-2 d-none">User name must at least 4 characters containing only letters, numbers and _ and starts with Capital letter</small>
+            
+            <input type="email" id="userEmailSignup" class="sign-up-property form-control mb-3" placeholder="Enter your email" oninput="validateEmail()" required>
+            <small id="errorMessageEmail" class="text-danger my-2 d-none">user@example.com</small>
+
+            <input type="password" id="userPassSignup" class="sign-up-property form-control mb-3" placeholder="Enter your password" required>
+            <small id="errorMessagePass" class="text-danger my-2 d-none">
+              <ul>
+                <li>Password must be four characters or longer</li>
+                <li>Password must contain at least 1 lowercase alphabetical character</li>
+                <li>Password must contain at least 1 uppercase alphabetical character</li>
+                <li>Password must contain at least 1 numeric character</li>
+              </ul>
+            </small>
+
+            <small id="alertMessage" class="d-block py-2"></small>
+          </div>
+          <button class="btn btn-outline-dark w-100" onclick="newUser()">Sign Up</button>
+          <p class="my-2">You have an account? <a href="./index.html">Sign In</a></p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Attach bootstrap helpers (Popper & JQuery) to the project -->
+    <!-- Using CDNJS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"
+      integrity="sha512-VK2zcvntEufaimc+efOYi622VN5ZacdnufnmX7zIhCPmjhKnOi9ZDMtg1/ug5l183f19gG1/cBstPO4D8N/Img=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+
+    <script src="./JS/index.js"></script>
+  </body>
+</html>
