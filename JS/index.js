@@ -29,7 +29,7 @@ function newUser() {
     usersList.push(user);
     localStorage.setItem("users_List", JSON.stringify(usersList));
     alertMessage.innerHTML = `<small class="text-success py-2">Sucess, You've signed Up</small>`;
-    redirect_Page("./../index.html");
+    redirect_Page("index.html");
   }
 }
 
@@ -38,7 +38,7 @@ function checkLogIn() {
     if(usersList[i].name == userName.value && usersList[i].pass == userPass.value) {
       localStorage.setItem('currentUser', JSON.stringify(usersList[i].name))
       alertMessage.innerHTML = `<small class="text-primary">Welcome Back 🖤</small>`;
-      redirect_Page("./../homePage.html");
+      redirect_Page("homePage.html");
       return true;
     }
   }
